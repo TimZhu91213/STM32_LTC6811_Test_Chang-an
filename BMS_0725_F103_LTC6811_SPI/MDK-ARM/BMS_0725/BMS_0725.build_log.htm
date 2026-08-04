@@ -21,13 +21,13 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-D:\FSAE_CHD\BMS\BMS_0725\MDK-ARM\BMS_0725.uvprojx
-Project File Date:  07/25/2026
+D:\FSAE_CHD\gitee\STM32_LTC68xx_BMS_Chang-an\BMS_0725_F103_LTC6811_SPI\MDK-ARM\BMS_0725.uvprojx
+Project File Date:  07/29/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\Bin'
 Build target 'BMS_0725'
-compiling main.c...
+compiling LTC681x.c...
 ../Core/Inc/LTC681x.h(176): warning:  #1295-D: Deprecated declaration LTC681x_diagn - give arg types
   void LTC681x_diagn();
 ../Core/Inc/LTC681x.h(180): warning:  #1295-D: Deprecated declaration LTC681x_pladc - give arg types
@@ -46,29 +46,19 @@ compiling main.c...
   void LTC681x_diagn();
 ../Core/Inc/LTC681x.h(429): warning:  #1295-D: Deprecated declaration LTC681x_stcomm - give arg types
   void LTC681x_stcomm();
-../Core/Inc/LTC6811.h(29): warning:  #1295-D: Deprecated declaration LTC6811_diagn - give arg types
-  void LTC6811_diagn();
-../Core/Inc/LTC6811.h(34): warning:  #1295-D: Deprecated declaration LTC6811_pladc - give arg types
-  uint8_t LTC6811_pladc();
-../Core/Inc/LTC6811.h(39): warning:  #1295-D: Deprecated declaration LTC6811_pollAdc - give arg types
-  uint32_t LTC6811_pollAdc();
-../Core/Inc/LTC6811.h(163): warning:  #1295-D: Deprecated declaration LTC6811_clrcell - give arg types
-  void LTC6811_clrcell();
-../Core/Inc/LTC6811.h(167): warning:  #1295-D: Deprecated declaration LTC6811_clraux - give arg types
-  void LTC6811_clraux();
-../Core/Inc/LTC6811.h(171): warning:  #1295-D: Deprecated declaration LTC6811_clrstat - give arg types
-  void LTC6811_clrstat();
-../Core/Inc/LTC6811.h(175): warning:  #1295-D: Deprecated declaration LTC6811_clrsctrl - give arg types
-  void LTC6811_clrsctrl();
-../Core/Inc/LTC6811.h(235): warning:  #1295-D: Deprecated declaration LTC6811_stsctrl - give arg types
-  void LTC6811_stsctrl();
-../Core/Inc/LTC6811.h(257): warning:  #1295-D: Deprecated declaration LTC6811_stcomm - give arg types
-  void LTC6811_stcomm();
-../Core/Src/main.c: 18 warnings, 0 errors
+..\Core\Src\LTC681x.c(106): warning:  #177-D: variable "md_bits"  was declared but never referenced
+    uint8_t md_bits;
+..\Core\Src\LTC681x.c(1300): warning:  #550-D: variable "error"  was set but never used
+    int8_t error;
+..\Core\Src\LTC681x.c(1734): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\LTC681x.c(1689): warning:  #177-D: variable "BYTES_IN_REG"  was declared but never referenced
+    const uint8_t BYTES_IN_REG = 8;
+..\Core\Src\LTC681x.c: 13 warnings, 0 errors
 linking...
 Program Size: Code=8028 RO-data=828 RW-data=32 ZI-data=1936  
 FromELF: creating hex file...
-"BMS_0725\BMS_0725.axf" - 0 Error(s), 18 Warning(s).
+"BMS_0725\BMS_0725.axf" - 0 Error(s), 13 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -92,7 +82,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE@6.1.1
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

@@ -5,3 +5,6 @@ Including unit test, useful code and documentation
 1.Stm32F103C8T6 spi→ LTC6811-1 (OK)
 2.Stm32F103C8T6 spi→ LTC6820 iso-spi→ LTC6811-1 (sheduled to start in 26th June)
 3.Stm32F103C8T6 spi→ LTC6820 iso-spi→ (More than one node)LTC6811-1 (sheduled to start in 26th June)
+
+# ChangeLog
+2026_08_04 adjust wake_up delay operation

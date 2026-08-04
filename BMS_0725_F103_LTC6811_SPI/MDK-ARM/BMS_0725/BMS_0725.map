@@ -150,11 +150,11 @@ Section Cross References
     ltc681x.o(i.read_68) refers to lt_spi.o(i.spi_write_read) for spi_write_read
     ltc681x.o(i.read_68) refers to lt_spi.o(i.cs_high) for cs_high
     ltc681x.o(i.wakeup_idle) refers to lt_spi.o(i.cs_low) for cs_low
-    ltc681x.o(i.wakeup_idle) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
     ltc681x.o(i.wakeup_idle) refers to lt_spi.o(i.spi_read_byte) for spi_read_byte
     ltc681x.o(i.wakeup_idle) refers to lt_spi.o(i.cs_high) for cs_high
     ltc681x.o(i.wakeup_sleep) refers to lt_spi.o(i.cs_low) for cs_low
     ltc681x.o(i.wakeup_sleep) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
+    ltc681x.o(i.wakeup_sleep) refers to lt_spi.o(i.spi_read_byte) for spi_read_byte
     ltc681x.o(i.wakeup_sleep) refers to lt_spi.o(i.cs_high) for cs_high
     ltc681x.o(i.write_68) refers to malloc.o(i.malloc) for malloc
     ltc681x.o(i.write_68) refers to ltc681x.o(i.pec15_calc) for pec15_calc
@@ -1451,7 +1451,7 @@ Image Symbol Table
     i.spi_write_array                        0x08001ef4   Section        0  lt_spi.o(i.spi_write_array)
     i.spi_write_read                         0x08001f20   Section        0  lt_spi.o(i.spi_write_read)
     i.wakeup_idle                            0x08001f70   Section        0  ltc681x.o(i.wakeup_idle)
-    i.wakeup_sleep                           0x08001f94   Section        0  ltc681x.o(i.wakeup_sleep)
+    i.wakeup_sleep                           0x08001f8e   Section        0  ltc681x.o(i.wakeup_sleep)
     i.write_68                               0x08001fb2   Section        0  ltc681x.o(i.write_68)
     .constdata                               0x08002048   Section      518  ltc681x.o(.constdata)
     .constdata                               0x0800224e   Section       18  stm32f1xx_hal_rcc.o(.constdata)
@@ -1664,8 +1664,8 @@ Image Symbol Table
     spi_read_byte                            0x08001ed1   Thumb Code    32  lt_spi.o(i.spi_read_byte)
     spi_write_array                          0x08001ef5   Thumb Code    40  lt_spi.o(i.spi_write_array)
     spi_write_read                           0x08001f21   Thumb Code    76  lt_spi.o(i.spi_write_read)
-    wakeup_idle                              0x08001f71   Thumb Code    36  ltc681x.o(i.wakeup_idle)
-    wakeup_sleep                             0x08001f95   Thumb Code    30  ltc681x.o(i.wakeup_sleep)
+    wakeup_idle                              0x08001f71   Thumb Code    30  ltc681x.o(i.wakeup_idle)
+    wakeup_sleep                             0x08001f8f   Thumb Code    36  ltc681x.o(i.wakeup_sleep)
     write_68                                 0x08001fb3   Thumb Code   148  ltc681x.o(i.write_68)
     crc15Table                               0x0800204e   Data         512  ltc681x.o(.constdata)
     AHBPrescTable                            0x08002260   Data          16  system_stm32f1xx.o(.constdata)
@@ -1808,8 +1808,8 @@ Memory Map of the image
     0x08001ed0   0x08001ed0   0x00000024   Code   RO           16    i.spi_read_byte     lt_spi.o
     0x08001ef4   0x08001ef4   0x0000002c   Code   RO           18    i.spi_write_array   lt_spi.o
     0x08001f20   0x08001f20   0x00000050   Code   RO           19    i.spi_write_read    lt_spi.o
-    0x08001f70   0x08001f70   0x00000024   Code   RO          222    i.wakeup_idle       ltc681x.o
-    0x08001f94   0x08001f94   0x0000001e   Code   RO          223    i.wakeup_sleep      ltc681x.o
+    0x08001f70   0x08001f70   0x0000001e   Code   RO          222    i.wakeup_idle       ltc681x.o
+    0x08001f8e   0x08001f8e   0x00000024   Code   RO          223    i.wakeup_sleep      ltc681x.o
     0x08001fb2   0x08001fb2   0x00000094   Code   RO          224    i.write_68          ltc681x.o
     0x08002046   0x08002046   0x00000002   PAD
     0x08002048   0x08002048   0x00000206   Data   RO          225    .constdata          ltc681x.o
@@ -1843,26 +1843,26 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       168         12          0          0          0        915   gpio.o
-       248         32          0          0         88     403383   lt_spi.o
-       122          0          0          0          0       5511   ltc6811.o
-      1328         26        518          0          0      15068   ltc681x.o
-       390         68          0          8        236       4472   main.o
-       184         22          0          0          0       1002   spi.o
-        36          8        236          0       1536        776   startup_stm32f103xb.o
-       164         28          0         12          0       5685   stm32f1xx_hal.o
-       172         14          0          0          0      28178   stm32f1xx_hal_cortex.o
-       506         34          0          0          0       3393   stm32f1xx_hal_gpio.o
-        60          8          0          0          0        822   stm32f1xx_hal_msp.o
-      1240         84         18          0          0       4948   stm32f1xx_hal_rcc.o
-       910          4          0          0          0       4533   stm32f1xx_hal_spi.o
-       636          6          0          0          0       4480   stm32f1xx_hal_uart.o
-        20          0          0          0          0       3626   stm32f1xx_it.o
-         2          0         24          4          0       1035   system_stm32f1xx.o
-       168         20          0          0         72       1566   usart.o
+       168         12          0          0          0       1003   gpio.o
+       248         32          0          0         88     404171   lt_spi.o
+       122          0          0          0          0       5883   ltc6811.o
+      1328         26        518          0          0      15892   ltc681x.o
+       390         68          0          8        236       4744   main.o
+       184         22          0          0          0       1094   spi.o
+        36          8        236          0       1536        820   startup_stm32f103xb.o
+       164         28          0         12          0       6049   stm32f1xx_hal.o
+       172         14          0          0          0      28406   stm32f1xx_hal_cortex.o
+       506         34          0          0          0       3573   stm32f1xx_hal_gpio.o
+        60          8          0          0          0        910   stm32f1xx_hal_msp.o
+      1240         84         18          0          0       5232   stm32f1xx_hal_rcc.o
+       910          4          0          0          0       4761   stm32f1xx_hal_spi.o
+       636          6          0          0          0       4748   stm32f1xx_hal_uart.o
+        20          0          0          0          0       4046   stm32f1xx_it.o
+         2          0         24          4          0       1175   system_stm32f1xx.o
+       168         20          0          0         72       1758   usart.o
 
     ----------------------------------------------------------------------
-      6370        366        828         24       1936     489393   Object Totals
+      6370        366        828         24       1936     494265   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         16          0          0          0          4          0   (incl. Padding)
 
@@ -1909,8 +1909,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      8028        452        828         32       1936     486489   Grand Totals
-      8028        452        828         32       1936     486489   ELF Image Totals
+      8028        452        828         32       1936     491361   Grand Totals
+      8028        452        828         32       1936     491361   ELF Image Totals
       8028        452        828         32          0          0   ROM Totals
 
 ==============================================================================

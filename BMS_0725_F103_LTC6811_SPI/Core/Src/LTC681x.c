@@ -80,7 +80,7 @@ void wakeup_idle(uint8_t total_ic)
   {
     cs_low();
     //delayMicroseconds(2); //Guarantees the isoSPI will be in ready mode
-		HAL_Delay(2);
+//		HAL_Delay(2);
     spi_read_byte(0xff);
     cs_high();
   }
@@ -93,6 +93,7 @@ void wakeup_sleep(uint8_t total_ic)
   {
     cs_low();
     HAL_Delay(1); // Guarantees the LTC6811 will be in standby
+		spi_read_byte(0xff);
 		cs_high();
   }
 }
