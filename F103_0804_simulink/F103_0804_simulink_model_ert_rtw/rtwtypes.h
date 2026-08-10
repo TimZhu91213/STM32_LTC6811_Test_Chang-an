@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'F103_0804_simulink_model'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.3
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sun Aug  9 23:06:44 2026
+ * C/C++ source code generated on : Mon Aug 10 16:58:34 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->STM32Processor

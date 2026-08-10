@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'F103_0804_simulink_model'.
  *
- * Model version                  : 1.2
+ * Model version                  : 1.3
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sun Aug  9 23:06:44 2026
+ * C/C++ source code generated on : Mon Aug 10 16:58:34 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->STM32Processor
@@ -46,13 +46,15 @@ typedef struct tag_RTM RT_MODEL;
 
 /* Block signals and states (default storage) for system '<Root>' */
 typedef struct {
-  uint16_T CCaller2_o2[108];           /* '<S1>/C Caller2' */
-  uint16_T CCaller1_o2[54];            /* '<S1>/C Caller1' */
-  uint8_T CCaller3_o2[114];            /* '<S1>/C Caller3' */
-  uint8_T CCaller4_o2[54];             /* '<S1>/C Caller4' */
-  uint8_T is_active_c3_F103_0804_simulink;/* '<S2>/Chart' */
-  uint8_T is_c3_F103_0804_simulink_model;/* '<S2>/Chart' */
-  uint8_T temporalCounter_i1;          /* '<S2>/Chart' */
+  real_T Switch;                       /* '<S1>/Switch' */
+  real_T UnitDelay_DSTATE;             /* '<S3>/Unit Delay' */
+  uint16_T CCaller2_o2[108];           /* '<S2>/C Caller2' */
+  uint16_T CCaller1_o2[54];            /* '<S2>/C Caller1' */
+  uint8_T CCaller3_o2[114];            /* '<S2>/C Caller3' */
+  uint8_T CCaller4_o2[54];             /* '<S2>/C Caller4' */
+  uint8_T is_active_c3_F103_0804_simulink;/* '<S3>/Chart' */
+  uint8_T is_c3_F103_0804_simulink_model;/* '<S3>/Chart' */
+  uint8_T temporalCounter_i1;          /* '<S3>/Chart' */
 } DW;
 
 /* Real-time Model Data Structure */
@@ -78,7 +80,7 @@ extern RT_MODEL *const rtM;
 /*-
  * These blocks were eliminated from the model due to optimizations:
  *
- * Block '<S2>/Data Type Conversion' : Eliminate redundant data type conversion
+ * Block '<S3>/Data Type Conversion' : Eliminate redundant data type conversion
  */
 
 /*-
@@ -96,9 +98,10 @@ extern RT_MODEL *const rtM;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'F103_0804_simulink_model'
- * '<S1>'   : 'F103_0804_simulink_model/Open_Wire_Check_and_Sample'
- * '<S2>'   : 'F103_0804_simulink_model/Subsystem'
- * '<S3>'   : 'F103_0804_simulink_model/Subsystem/Chart'
+ * '<S1>'   : 'F103_0804_simulink_model/Function-Call Subsystem'
+ * '<S2>'   : 'F103_0804_simulink_model/Open_Wire_Check_and_Sample'
+ * '<S3>'   : 'F103_0804_simulink_model/Subsystem'
+ * '<S4>'   : 'F103_0804_simulink_model/Subsystem/Chart'
  */
 #endif                                 /* F103_0804_simulink_model_h_ */
 

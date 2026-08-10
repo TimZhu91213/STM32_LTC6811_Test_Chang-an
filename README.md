@@ -11,9 +11,13 @@
 > Including unit test, useful code and documentation
 
 ## ChangeLog
-### v0.1.0
-- 2026_08_04 adjust wake_up delay operation
+### v0.1.0 | 2026_08_04 
+- adjust wake_up delay operation
 
-### v0.1.1
-- 2026_08_10 attempt to integrate Simulink generation code
+### v0.1.1 | 2026_08_10 
+- attempt to integrate Simulink generation code
 - update readme.md
+
+### v0.1.2 | 2026_0810
+- use unit delay in simulink model, achieve data pass across different subsystem
+- integrate FreeRtos, invoke two different taks

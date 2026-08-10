@@ -1,0 +1,127 @@
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'F103_0804_simulink'
+assembling startup_stm32f103xb.s...
+compiling LTC6813_stm32.c...
+..\LTC681x\LTC681x.h(396): warning:  #1295-D: Deprecated declaration LTC681x_pladc - give arg types
+  uint8_t LTC681x_pladc();
+..\LTC681x\LTC681x.h(402): warning:  #1295-D: Deprecated declaration LTC681x_pollAdc - give arg types
+  uint32_t LTC681x_pollAdc();
+..\LTC681x\LTC681x.h(410): warning:  #1295-D: Deprecated declaration LTC681x_clrcell - give arg types
+  void LTC681x_clrcell();
+..\LTC681x\LTC681x.h(418): warning:  #1295-D: Deprecated declaration LTC681x_clraux - give arg types
+  void LTC681x_clraux();
+..\LTC681x\LTC681x.h(426): warning:  #1295-D: Deprecated declaration LTC681x_clrstat - give arg types
+  void LTC681x_clrstat();
+..\LTC681x\LTC681x.h(435): warning:  #1295-D: Deprecated declaration LTC681x_diagn - give arg types
+  void LTC681x_diagn();
+..\LTC681x\LTC681x.h(622): warning:  #1295-D: Deprecated declaration LTC681x_stsctrl - give arg types
+  void LTC681x_stsctrl();
+..\LTC681x\LTC681x.h(630): warning:  #1295-D: Deprecated declaration LTC681x_clrsctrl - give arg types
+  void LTC681x_clrsctrl();
+..\LTC681x\LTC6813_stm32.h(195): warning:  #1295-D: Deprecated declaration LTC6813_pladc - give arg types
+  uint8_t LTC6813_pladc();
+..\LTC681x\LTC6813_stm32.h(201): warning:  #1295-D: Deprecated declaration LTC6813_pollAdc - give arg types
+  uint32_t LTC6813_pollAdc();
+..\LTC681x\LTC6813_stm32.h(207): warning:  #1295-D: Deprecated declaration LTC6813_clrcell - give arg types
+  void LTC6813_clrcell();
+..\LTC681x\LTC6813_stm32.h(213): warning:  #1295-D: Deprecated declaration LTC6813_clraux - give arg types
+  void LTC6813_clraux();
+..\LTC681x\LTC6813_stm32.h(219): warning:  #1295-D: Deprecated declaration LTC6813_clrstat - give arg types
+  void LTC6813_clrstat();
+..\LTC681x\LTC6813_stm32.h(228): warning:  #1295-D: Deprecated declaration LTC6813_diagn - give arg types
+  void LTC6813_diagn();
+..\LTC681x\LTC6813_stm32.h(413): warning:  #1295-D: Deprecated declaration LTC6813_stsctrl - give arg types
+  void LTC6813_stsctrl();
+..\LTC681x\LTC6813_stm32.h(419): warning:  #1295-D: Deprecated declaration LTC6813_clrsctrl - give arg types
+  void LTC6813_clrsctrl();
+..\LTC681x\LTC6813_stm32.h(468): warning:  #1295-D: Deprecated declaration LTC6813_mute - give arg types
+  void LTC6813_mute();
+..\LTC681x\LTC6813_stm32.h(474): warning:  #1295-D: Deprecated declaration LTC6813_unmute - give arg types
+  void LTC6813_unmute();
+..\LTC681x\LTC6813_stm32.c(328): warning:  #550-D: variable "conv_time"  was set but never used
+  	uint32_t conv_time=0;  
+..\LTC681x\LTC6813_stm32.c(784): warning:  #1-D: last line of file ends without a newline
+  }
+..\LTC681x\LTC6813_stm32.c: 20 warnings, 0 errors
+compiling main.c...
+compiling stm32f1xx_it.c...
+compiling spi.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling can.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling LTC681x.c...
+..\LTC681x\LTC681x.h(396): warning:  #1295-D: Deprecated declaration LTC681x_pladc - give arg types
+  uint8_t LTC681x_pladc();
+..\LTC681x\LTC681x.h(402): warning:  #1295-D: Deprecated declaration LTC681x_pollAdc - give arg types
+  uint32_t LTC681x_pollAdc();
+..\LTC681x\LTC681x.h(410): warning:  #1295-D: Deprecated declaration LTC681x_clrcell - give arg types
+  void LTC681x_clrcell();
+..\LTC681x\LTC681x.h(418): warning:  #1295-D: Deprecated declaration LTC681x_clraux - give arg types
+  void LTC681x_clraux();
+..\LTC681x\LTC681x.h(426): warning:  #1295-D: Deprecated declaration LTC681x_clrstat - give arg types
+  void LTC681x_clrstat();
+..\LTC681x\LTC681x.h(435): warning:  #1295-D: Deprecated declaration LTC681x_diagn - give arg types
+  void LTC681x_diagn();
+..\LTC681x\LTC681x.h(622): warning:  #1295-D: Deprecated declaration LTC681x_stsctrl - give arg types
+  void LTC681x_stsctrl();
+..\LTC681x\LTC681x.h(630): warning:  #1295-D: Deprecated declaration LTC681x_clrsctrl - give arg types
+  void LTC681x_clrsctrl();
+..\LTC681x\LTC681x.c(104): warning:  #177-D: variable "md_bits"  was declared but never referenced
+  	uint8_t md_bits;
+..\LTC681x\LTC681x.c(133): warning:  #223-D: function "malloc" declared implicitly
+  	cmd = (uint8_t *)malloc(CMD_LEN*sizeof(uint8_t));
+..\LTC681x\LTC681x.c(159): warning:  #223-D: function "free" declared implicitly
+  	free(cmd);
+..\LTC681x\LTC681x.c(463): warning:  #223-D: function "malloc" declared implicitly
+  	cell_data = (uint8_t *) malloc((NUM_RX_BYT*total_ic)*sizeof(uint8_t));
+..\LTC681x\LTC681x.c(507): warning:  #223-D: function "free" declared implicitly
+  	free(cell_data);
+..\LTC681x\LTC681x.c(525): warning:  #223-D: function "malloc" declared implicitly
+  	data = (uint8_t *) malloc((NUM_RX_BYT*total_ic)*sizeof(uint8_t));
+..\LTC681x\LTC681x.c(568): warning:  #223-D: function "free" declared implicitly
+  	free(data);
+..\LTC681x\LTC681x.c(595): warning:  #223-D: function "malloc" declared implicitly
+  	data = (uint8_t *) malloc((12*total_ic)*sizeof(uint8_t));
+..\LTC681x\LTC681x.c(707): warning:  #223-D: function "free" declared implicitly
+  	free(data);
+..\LTC681x\LTC681x.c(1185): warning:  #177-D: variable "a"  was declared but never referenced
+  	int32_t a, b;
+..\LTC681x\LTC681x.c(1185): warning:  #177-D: variable "b"  was declared but never referenced
+  	int32_t a, b;
+..\LTC681x\LTC681x.c(1356): warning:  #550-D: variable "error"  was set but never used
+  	int8_t error;
+..\LTC681x\LTC681x.c(1358): warning:  #550-D: variable "conv_time"  was set but never used
+  	uint32_t conv_time=0;
+..\LTC681x\LTC681x.c(1446): warning:  #550-D: variable "error"  was set but never used
+  	int8_t error;
+..\LTC681x\LTC681x.c(1450): warning:  #550-D: variable "conv_time"  was set but never used
+  	uint32_t conv_time=0;
+..\LTC681x\LTC681x.c(1602): warning:  #550-D: variable "error"  was set but never used
+  	int8_t error;
+..\LTC681x\LTC681x.c(1604): warning:  #550-D: variable "conv_time"  was set but never used
+  	uint32_t conv_time=0;
+..\LTC681x\LTC681x.c(1744): warning:  #177-D: variable "BYTES_IN_REG"  was declared but never referenced
+  	const uint8_t BYTES_IN_REG = 8;
+..\LTC681x\LTC681x.c: 26 warnings, 0 errors
+compiling stm32f1xx_hal_msp.c...
+compiling stm32f1xx_hal_exti.c...
+compiling usart.c...
+compiling stm32f1xx_hal_can.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_uart.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling gpio.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_flash.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling bms_hardware.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_spi.c...
+linking...
+Program Size: Code=4362 RO-data=310 RW-data=16 ZI-data=1920  
+FromELF: creating hex file...
+"F103_0804_simulink\F103_0804_simulink.axf" - 0 Error(s), 46 Warning(s).
+Build Time Elapsed:  00:00:04
