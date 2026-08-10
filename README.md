@@ -18,6 +18,9 @@
 - attempt to integrate Simulink generation code
 - update readme.md
 
-### v0.1.2 | 2026_0810
+### v0.1.2 | 2026_08_10
 - use unit delay in simulink model, achieve data pass across different subsystem
 - integrate FreeRtos, invoke two different taks
+
+### v0.1.3 | 2026_08_10
+- test CAN transmit __successfully__, protecting CAN operation using the FreeRTOS critical section 

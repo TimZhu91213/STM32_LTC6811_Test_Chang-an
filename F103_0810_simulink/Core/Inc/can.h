@@ -41,7 +41,9 @@ extern CAN_HandleTypeDef hcan;
 void MX_CAN_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+HAL_StatusTypeDef Init_Filter(void);
+void MyCAN_InitTxIT(void); /* call after osKernelInitialize: sem + TX IRQ */
+HAL_StatusTypeDef MyCAN_Transmit(CAN_TxHeaderTypeDef *TxMessage, uint8_t *Data);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

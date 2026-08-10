@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.4
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Mon Aug 10 17:00:01 2026
+ * C/C++ source code generated on : Mon Aug 10 17:44:46 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->STM32Processor
@@ -38,28 +38,35 @@ RT_MODEL *const rtM = &rtM_;
 /* Model step function for TID1 */
 void Sample_function_call(void)        /* Explicit Task: Sample_function_call */
 {
+  uint8_T rtb_CCaller1_o1;
+  uint8_T rtb_CCaller2_o1;
+  uint8_T rtb_CCaller3_o1;
+  uint8_T rtb_CCaller4_o1;
+
   /* RootInportFunctionCallGenerator generated from: '<Root>/Sample_function_call' incorporates:
    *  SubSystem: '<Root>/Function-Call Subsystem'
    */
-  /* Switch: '<S1>/Switch' incorporates:
-   *  Constant: '<S1>/Constant'
-   */
-  rtDW.Switch = 1.0;
+  /* Switch: '<S1>/Switch' */
+  rtDW.Switch = (rtDW.Add >= 1);
 
   /* RootInportFunctionCallGenerator generated from: '<Root>/Sample_function_call' incorporates:
    *  SubSystem: '<Root>/Open_Wire_Check_and_Sample'
    */
   /* CCaller: '<S2>/C Caller3' */
-  Bms_DetectCellOpenWire(&rtDW.CCaller3_o2[0]);
+  rtb_CCaller3_o1 = Bms_DetectCellOpenWire(&rtDW.CCaller3_o2[0]);
 
   /* CCaller: '<S2>/C Caller4' */
-  Bms_DetectTempOpenWire(&rtDW.CCaller4_o2[0]);
+  rtb_CCaller4_o1 = Bms_DetectTempOpenWire(&rtDW.CCaller4_o2[0]);
 
   /* CCaller: '<S2>/C Caller2' */
-  Bms_SampleCellVoltage(&rtDW.CCaller2_o2[0]);
+  rtb_CCaller2_o1 = Bms_SampleCellVoltage(&rtDW.CCaller2_o2[0]);
 
   /* CCaller: '<S2>/C Caller1' */
-  Bms_SampleTemperature(&rtDW.CCaller1_o2[0]);
+  rtb_CCaller1_o1 = Bms_SampleTemperature(&rtDW.CCaller1_o2[0]);
+
+  /* Sum: '<S2>/Add' */
+  rtDW.Add = (uint8_T)((uint8_T)((uint8_T)(rtb_CCaller3_o1 + rtb_CCaller4_o1) +
+    rtb_CCaller2_o1) + rtb_CCaller1_o1);
 
   /* End of Outputs for RootInportFunctionCallGenerator generated from: '<Root>/Sample_function_call' */
 }

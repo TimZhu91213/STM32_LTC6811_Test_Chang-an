@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.4
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Mon Aug 10 17:00:01 2026
+ * C/C++ source code generated on : Mon Aug 10 17:44:46 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->STM32Processor
@@ -52,6 +52,7 @@ typedef struct {
   uint16_T CCaller1_o2[54];            /* '<S2>/C Caller1' */
   uint8_T CCaller3_o2[114];            /* '<S2>/C Caller3' */
   uint8_T CCaller4_o2[54];             /* '<S2>/C Caller4' */
+  uint8_T Add;                         /* '<S2>/Add' */
   uint8_T is_active_c3_F103_0804_simulink;/* '<S3>/Chart' */
   uint8_T is_c3_F103_0804_simulink_model;/* '<S3>/Chart' */
   uint8_T temporalCounter_i1;          /* '<S3>/Chart' */

@@ -1,7 +1,7 @@
 Dependencies for Project 'F103_0804_simulink', Target 'F103_0804_simulink': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
-F (startup_stm32f103xb.s)(0x6A795F64)(--cpu Cortex-M3 -g --apcs=interwork -I ../Drivers/CMSIS/Include-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xb.lst --xref -o f103_0804_simulink\startup_stm32f103xb.o --depend f103_0804_simulink\startup_stm32f103xb.d)
-F (../Core/Src/main.c)(0x6A795F62)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\main.o --omf_browse f103_0804_simulink\main.crf --depend f103_0804_simulink\main.d)
+F (startup_stm32f103xb.s)(0x6A79DAD7)(--cpu Cortex-M3 -g --apcs=interwork -I ../Drivers/CMSIS/Include-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xb.lst --xref -o f103_0804_simulink\startup_stm32f103xb.o --depend f103_0804_simulink\startup_stm32f103xb.d)
+F (../Core/Src/main.c)(0x6A79DB38)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\main.o --omf_browse f103_0804_simulink\main.crf --depend f103_0804_simulink\main.d)
 I (../Core/Inc/main.h)(0x6A71CA3E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6A717ED5)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A795F62)
@@ -43,13 +43,13 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x6A717EDA
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x6A717EDA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6A717EDA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6A717EDA)
-I (../Core/Inc/can.h)(0x6A71CA3D)
+I (../Core/Inc/can.h)(0x6A79DB38)
 I (../Core/Inc/spi.h)(0x6A71CA3D)
 I (../Core/Inc/usart.h)(0x6A71CA3E)
 I (../Core/Inc/gpio.h)(0x6A71CA3D)
 I (../LTC681x/bms_hardware.h)(0x6A7981C6)
-I (../F103_0804_simulink_model_ert_rtw/F103_0804_simulink_model.h)(0x6A799315)
-I (../F103_0804_simulink_model_ert_rtw/rtwtypes.h)(0x6A799315)
+I (../F103_0804_simulink_model_ert_rtw/F103_0804_simulink_model.h)(0x6A799D91)
+I (../F103_0804_simulink_model_ert_rtw/rtwtypes.h)(0x6A799D91)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\math.h)(0x67E3FB1D)
 I (../Appl/bms_app.h)(0x6A798368)
 F (../Core/Src/gpio.c)(0x6A71CA3D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\gpio.o --omf_browse f103_0804_simulink\gpio.crf --depend f103_0804_simulink\gpio.d)
@@ -84,7 +84,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6A717ED5)
-F (../Core/Src/freertos.c)(0x6A798FC7)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\freertos.o --omf_browse f103_0804_simulink\freertos.crf --depend f103_0804_simulink\freertos.d)
+F (../Core/Src/freertos.c)(0x6A79DBDA)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\freertos.o --omf_browse f103_0804_simulink\freertos.crf --depend f103_0804_simulink\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6A717EDA)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stddef.h)(0x67E3FB1E)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdint.h)(0x67E3FB1E)
@@ -126,12 +126,13 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6A717ED5)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x6A717EDA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6A717EDA)
-I (../F103_0804_simulink_model_ert_rtw/F103_0804_simulink_model.h)(0x6A799315)
-I (../F103_0804_simulink_model_ert_rtw/rtwtypes.h)(0x6A799315)
+I (../F103_0804_simulink_model_ert_rtw/F103_0804_simulink_model.h)(0x6A799D91)
+I (../F103_0804_simulink_model_ert_rtw/rtwtypes.h)(0x6A799D91)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\math.h)(0x67E3FB1D)
 I (../Appl/bms_app.h)(0x6A798368)
-F (../Core/Src/can.c)(0x6A71CA3D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\can.o --omf_browse f103_0804_simulink\can.crf --depend f103_0804_simulink\can.d)
-I (../Core/Inc/can.h)(0x6A71CA3D)
+I (../Core/Inc/can.h)(0x6A79DB38)
+F (../Core/Src/can.c)(0x6A79DB38)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\can.o --omf_browse f103_0804_simulink\can.crf --depend f103_0804_simulink\can.d)
+I (../Core/Inc/can.h)(0x6A79DB38)
 I (../Core/Inc/main.h)(0x6A71CA3E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6A717ED5)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A795F62)
@@ -162,6 +163,17 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6A717ED5)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x6A717EDA)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6A717EDA)
+I (../Core/Inc/FreeRTOSConfig.h)(0x6A795F60)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6A717EDA)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6A717EDA)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6A717EDA)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x6A717EDA)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x6A717EDA)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x6A717EDA)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6A717EDA)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6A717EDA)
 F (../Core/Src/spi.c)(0x6A795F61)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\spi.o --omf_browse f103_0804_simulink\spi.crf --depend f103_0804_simulink\spi.d)
 I (../Core/Inc/spi.h)(0x6A71CA3D)
 I (../Core/Inc/main.h)(0x6A71CA3E)
@@ -226,7 +238,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6A717ED5)
-F (../Core/Src/stm32f1xx_it.c)(0x6A795F61)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\stm32f1xx_it.o --omf_browse f103_0804_simulink\stm32f1xx_it.crf --depend f103_0804_simulink\stm32f1xx_it.d)
+F (../Core/Src/stm32f1xx_it.c)(0x6A79A1F3)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\stm32f1xx_it.o --omf_browse f103_0804_simulink\stm32f1xx_it.crf --depend f103_0804_simulink\stm32f1xx_it.d)
 I (../Core/Inc/main.h)(0x6A71CA3E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6A717ED5)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6A795F62)
@@ -257,7 +269,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6A717ED5)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6A717ED5)
-I (../Core/Inc/stm32f1xx_it.h)(0x6A795F61)
+I (../Core/Inc/stm32f1xx_it.h)(0x6A79A1F4)
 F (../Core/Src/stm32f1xx_hal_msp.c)(0x6A795F61)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\stm32f1xx_hal_msp.o --omf_browse f103_0804_simulink\stm32f1xx_hal_msp.crf --depend f103_0804_simulink\stm32f1xx_hal_msp.d)
 I (../Core/Inc/main.h)(0x6A71CA3E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6A717ED5)
@@ -915,15 +927,15 @@ I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x67E3FB1
 I (../LTC681x/bms_hardware.h)(0x6A7981C6)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\string.h)(0x67E3FB1E)
 F (..\Appl\bms_app.h)(0x6A798368)()
-F (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.c)(0x6A799315)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\f103_0804_simulink_model.o --omf_browse f103_0804_simulink\f103_0804_simulink_model.crf --depend f103_0804_simulink\f103_0804_simulink_model.d)
-I (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.h)(0x6A799315)
-I (..\F103_0804_simulink_model_ert_rtw\rtwtypes.h)(0x6A799315)
+F (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.c)(0x6A799D91)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\f103_0804_simulink_model.o --omf_browse f103_0804_simulink\f103_0804_simulink_model.crf --depend f103_0804_simulink\f103_0804_simulink_model.d)
+I (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.h)(0x6A799D91)
+I (..\F103_0804_simulink_model_ert_rtw\rtwtypes.h)(0x6A799D91)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\math.h)(0x67E3FB1D)
 I (../Appl/bms_app.h)(0x6A798368)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdint.h)(0x67E3FB1E)
-F (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.h)(0x6A799315)()
-F (..\F103_0804_simulink_model_ert_rtw\rtmodel.h)(0x6A799315)()
-F (..\F103_0804_simulink_model_ert_rtw\rtwtypes.h)(0x6A799315)()
+F (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.h)(0x6A799D91)()
+F (..\F103_0804_simulink_model_ert_rtw\rtmodel.h)(0x6A799D91)()
+F (..\F103_0804_simulink_model_ert_rtw\rtwtypes.h)(0x6A799D91)()
 F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x6A717EDA)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3-I.\RTE\_F103_0804_simulink-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o f103_0804_simulink\croutine.o --omf_browse f103_0804_simulink\croutine.crf --depend f103_0804_simulink\croutine.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6A717EDA)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stddef.h)(0x67E3FB1E)

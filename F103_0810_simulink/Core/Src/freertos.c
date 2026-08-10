@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "F103_0804_simulink_model.h"
 #include "rtwtypes.h"
+#include "can.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -36,7 +37,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define CAN_TEST_STD_ID   0x123U   /* 11-bit standard ID */
+#define CAN_TEST_DLC      8U
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -53,7 +55,7 @@ osThreadId_t RTOSTask1Handle;
 const osThreadAttr_t RTOSTask1_attributes = {
   .name = "RTOSTask1",
   .stack_size = 512 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityBelowNormal,
 };
 /* Definitions for myTask02 */
 osThreadId_t myTask02Handle;
@@ -61,6 +63,13 @@ const osThreadAttr_t myTask02_attributes = {
   .name = "myTask02",
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal1,
+};
+/* Definitions for myTask03 */
+osThreadId_t myTask03Handle;
+const osThreadAttr_t myTask03_attributes = {
+  .name = "myTask03",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -70,6 +79,7 @@ const osThreadAttr_t myTask02_attributes = {
 
 void StartDefaultTask(void *argument);
 void StartTask02(void *argument);
+void StartTask03(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -80,7 +90,8 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
-
+  /* Survive Cube re-gen of main.c: create CAN TX sem + enable TX IRQ */
+  MyCAN_InitTxIT();
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -106,6 +117,9 @@ void MX_FREERTOS_Init(void) {
   /* creation of myTask02 */
   myTask02Handle = osThreadNew(StartTask02, NULL, &myTask02_attributes);
 
+  /* creation of myTask03 */
+  myTask03Handle = osThreadNew(StartTask03, NULL, &myTask03_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -126,10 +140,14 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-  /* Infinite loop */
-  for(;;)
+
+
+  /* Standard data frame (11-bit ID) */
+  
+  
+  for (;;)
   {
-		Sample_function_call();
+    Sample_function_call();
     osDelay(10);
   }
   /* USER CODE END StartDefaultTask */
@@ -152,6 +170,38 @@ void StartTask02(void *argument)
     osDelay(10);
   }
   /* USER CODE END StartTask02 */
+}
+
+/* USER CODE BEGIN Header_StartTask03 */
+/**
+* @brief Function implementing the myTask03 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTask03 */
+void StartTask03(void *argument)
+{
+  /* USER CODE BEGIN StartTask03 */
+  CAN_TxHeaderTypeDef tx_hdr;
+  uint8_t tx_data[8] = {0x01U, 0x02U, 0x03U, 0x04U, 0x05U, 0x06U, 0x07U, 0x08U};
+  uint32_t tick;
+
+  /* Standard data frame (11-bit ID) */
+  tx_hdr.StdId = CAN_TEST_STD_ID;
+  tx_hdr.ExtId = 0U;
+  tx_hdr.IDE = CAN_ID_STD;
+  tx_hdr.RTR = CAN_RTR_DATA;
+  tx_hdr.DLC = CAN_TEST_DLC;
+  tx_hdr.TransmitGlobalTime = DISABLE;
+
+  tick = osKernelGetTickCount();
+  for (;;)
+  {
+    (void)MyCAN_Transmit(&tx_hdr, tx_data);
+    tick += 10U;
+    (void)osDelayUntil(tick);
+  }
+  /* USER CODE END StartTask03 */
 }
 
 /* Private application code --------------------------------------------------*/

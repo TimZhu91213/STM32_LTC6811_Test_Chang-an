@@ -45,3 +45,4 @@ f103_0804_simulink\freertos.o: ../F103_0804_simulink_model_ert_rtw/F103_0804_sim
 f103_0804_simulink\freertos.o: ../F103_0804_simulink_model_ert_rtw/rtwtypes.h
 f103_0804_simulink\freertos.o: E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 f103_0804_simulink\freertos.o: ../Appl/bms_app.h
+f103_0804_simulink\freertos.o: ../Core/Inc/can.h
