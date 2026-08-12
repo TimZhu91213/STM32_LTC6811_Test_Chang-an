@@ -69,7 +69,7 @@ osThreadId_t myTask03Handle;
 const osThreadAttr_t myTask03_attributes = {
   .name = "myTask03",
   .stack_size = 256 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -147,7 +147,8 @@ void StartDefaultTask(void *argument)
   
   for (;;)
   {
-    Sample_function_call();
+    /* Sample busy-waits on SPI; leave off while verifying CAN TX */
+//    Sample_function_call();
     osDelay(10);
   }
   /* USER CODE END StartDefaultTask */
@@ -198,7 +199,7 @@ void StartTask03(void *argument)
   for (;;)
   {
     (void)MyCAN_Transmit(&tx_hdr, tx_data);
-    tick += 10U;
+    tick += 100U; /* 10 Hz while debugging TX */
     (void)osDelayUntil(tick);
   }
   /* USER CODE END StartTask03 */

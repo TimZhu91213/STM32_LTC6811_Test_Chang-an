@@ -38,15 +38,16 @@ void MX_CAN_Init(void)
 
   /* USER CODE END CAN_Init 1 */
   hcan.Instance = CAN1;
+  /* Same as Stm32F103_CAN_BootLoader_test_0811: 36MHz/4/(1+13+4)=500k */
   hcan.Init.Prescaler = 4;
   hcan.Init.Mode = CAN_MODE_NORMAL;
-  hcan.Init.SyncJumpWidth = CAN_SJW_4TQ;
+  hcan.Init.SyncJumpWidth = CAN_SJW_1TQ;
   hcan.Init.TimeSeg1 = CAN_BS1_13TQ;
   hcan.Init.TimeSeg2 = CAN_BS2_4TQ;
   hcan.Init.TimeTriggeredMode = DISABLE;
-  hcan.Init.AutoBusOff = DISABLE;
+  hcan.Init.AutoBusOff = ENABLE;
   hcan.Init.AutoWakeUp = DISABLE;
-  hcan.Init.AutoRetransmission = DISABLE;
+  hcan.Init.AutoRetransmission = ENABLE;
   hcan.Init.ReceiveFifoLocked = DISABLE;
   hcan.Init.TransmitFifoPriority = DISABLE;
   if (HAL_CAN_Init(&hcan) != HAL_OK)
@@ -130,13 +131,8 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 }
 
 /* USER CODE BEGIN 1 */
-#include "cmsis_os.h"
-#include "task.h"
 
-/* 1 = mailbox free / TX done; Task waits here instead of polling */
-static osSemaphoreId_t s_can_tx_sem;
-
-/* Accept-all filter (mask=0), then call HAL_CAN_Start — same order as f103_can_26_2_18 */
+/* Accept-all filter (mask=0), then call HAL_CAN_Start */
 HAL_StatusTypeDef Init_Filter(void)
 {
   CAN_FilterTypeDef sFilterConfig = {0};
@@ -155,88 +151,35 @@ HAL_StatusTypeDef Init_Filter(void)
   return HAL_CAN_ConfigFilter(&hcan, &sFilterConfig);
 }
 
-/**
- * @brief Create TX-done semaphore and enable mailbox-empty IRQ.
- * @note  Call after osKernelInitialize(), before tasks that send CAN.
- */
+/* Placeholder: freertos.c still calls this after Cube regen */
 void MyCAN_InitTxIT(void)
 {
-  const osSemaphoreAttr_t attr = { .name = "can_tx" };
-
-  if (s_can_tx_sem == NULL)
-  {
-    /* initial_count=1: allowed to send first frame immediately */
-    s_can_tx_sem = osSemaphoreNew(1, 1, &attr);
-  }
-
-  /* Idempotent: safe if called from both main and MX_FREERTOS_Init */
-  (void)HAL_CAN_ActivateNotification(&hcan, CAN_IT_TX_MAILBOX_EMPTY);
-}
-
-static void MyCAN_TxDoneFromISR(void)
-{
-  if (s_can_tx_sem != NULL)
-  {
-    (void)osSemaphoreRelease(s_can_tx_sem);
-  }
-}
-
-void HAL_CAN_TxMailbox0CompleteCallback(CAN_HandleTypeDef *hcan_ptr)
-{
-  (void)hcan_ptr;
-  MyCAN_TxDoneFromISR();
-}
-
-void HAL_CAN_TxMailbox1CompleteCallback(CAN_HandleTypeDef *hcan_ptr)
-{
-  (void)hcan_ptr;
-  MyCAN_TxDoneFromISR();
-}
-
-void HAL_CAN_TxMailbox2CompleteCallback(CAN_HandleTypeDef *hcan_ptr)
-{
-  (void)hcan_ptr;
-  MyCAN_TxDoneFromISR();
-}
-
-void HAL_CAN_ErrorCallback(CAN_HandleTypeDef *hcan_ptr)
-{
-  (void)hcan_ptr;
-  /* Avoid deadlock if TX fails (no ACK / bus error) */
-  MyCAN_TxDoneFromISR();
 }
 
 /**
- * @brief Interrupt-assisted transmit: wait TX-done sem, then AddTxMessage.
- *        Completion is signaled from TxMailbox*CompleteCallback (ISR).
+ * @brief Simple polling TX (no semaphore / TX-complete IRQ).
+ *        Sem+IRQ path deadlocks when TX errors and callback path misses a release.
  */
 HAL_StatusTypeDef MyCAN_Transmit(CAN_TxHeaderTypeDef *TxMessage, uint8_t *Data)
 {
   uint32_t pTxMailbox;
-  HAL_StatusTypeDef st;
+  uint32_t t0;
 
-  if ((TxMessage == NULL) || (Data == NULL) || (s_can_tx_sem == NULL))
+  if ((TxMessage == NULL) || (Data == NULL))
   {
     return HAL_ERROR;
   }
 
-  /* Block task until previous frame finished (or error released sem) */
-  if (osSemaphoreAcquire(s_can_tx_sem, 20) != osOK)
+  t0 = HAL_GetTick();
+  while (HAL_CAN_GetTxMailboxesFreeLevel(&hcan) == 0U)
   {
-    return HAL_BUSY;
+    if ((HAL_GetTick() - t0) > 50U)
+    {
+      return HAL_TIMEOUT;
+    }
   }
 
-  /* Keep AddTxMessage atomic vs other tasks (short critical section) */
-  taskENTER_CRITICAL();
-  st = HAL_CAN_AddTxMessage(&hcan, TxMessage, Data, &pTxMailbox);
-  taskEXIT_CRITICAL();
-
-  if (st != HAL_OK)
-  {
-    (void)osSemaphoreRelease(s_can_tx_sem);
-  }
-  /* else: sem released in TxMailbox*CompleteCallback / ErrorCallback */
-  return st;
+  return HAL_CAN_AddTxMessage(&hcan, TxMessage, Data, &pTxMailbox);
 }
 
 /* USER CODE END 1 */

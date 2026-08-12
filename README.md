@@ -24,3 +24,6 @@
 
 ### v0.1.3 | 2026_08_10
 - test CAN transmit __successfully__, protecting CAN operation using the FreeRTOS critical section 
+
+### v0.1.4 | 2026_08_12
+- __"F103_0811_simulink"__ project has changed irom setting, compatible with STM32 Bootloader
