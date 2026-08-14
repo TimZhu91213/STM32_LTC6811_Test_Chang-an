@@ -27,3 +27,7 @@
 
 ### v0.1.4 | 2026_08_12
 - __"F103_0811_simulink"__ project has changed irom setting, compatible with STM32 Bootloader
+
+### v0.2.1 | 2026_08_14
+- ==Transplantation== from __"F103_0811_simulink"__  TO  __"F407_VET6_Test"__ successfully, compatible with the newest bootloader project
+> Realize the conditional jump from the app to the bootloader

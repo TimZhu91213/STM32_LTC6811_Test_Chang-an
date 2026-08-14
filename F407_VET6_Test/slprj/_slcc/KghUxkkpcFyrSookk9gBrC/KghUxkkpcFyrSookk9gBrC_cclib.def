@@ -1,0 +1,10 @@
+EXPORTS
+    Bms_DetectCellOpenWire_KghUxkkpcFyrSookk9gBrC @1
+    Bms_DetectTempOpenWire_KghUxkkpcFyrSookk9gBrC @2
+    Bms_LED_Control_KghUxkkpcFyrSookk9gBrC @3
+    Bms_SampleCellVoltage_KghUxkkpcFyrSookk9gBrC @4
+    Bms_SampleTemperature_KghUxkkpcFyrSookk9gBrC @5
+    Bms_StartCellAdcEx_KghUxkkpcFyrSookk9gBrC @6
+    Bms_StartCellAdc_KghUxkkpcFyrSookk9gBrC @7
+    get_checksum_source_info @8
+    get_dll_checksum_KghUxkkpcFyrSookk9gBrC @9
