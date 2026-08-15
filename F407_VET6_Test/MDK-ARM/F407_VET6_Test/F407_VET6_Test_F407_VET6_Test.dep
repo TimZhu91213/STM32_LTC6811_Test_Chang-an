@@ -1,7 +1,7 @@
 Dependencies for Project 'F407_VET6_Test', Target 'F407_VET6_Test': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
-F (startup_stm32f407xx.s)(0x6A7F0D75)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Drivers/CMSIS/Include-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f407xx.lst --xref -o f407_vet6_test\startup_stm32f407xx.o --depend f407_vet6_test\startup_stm32f407xx.d)
-F (../Core/Src/main.c)(0x6A7F0775)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\main.o --omf_browse f407_vet6_test\main.crf --depend f407_vet6_test\main.d)
+F (startup_stm32f407xx.s)(0x6A8028D5)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Drivers/CMSIS/Include-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f407xx.lst --xref -o f407_vet6_test\startup_stm32f407xx.o --depend f407_vet6_test\startup_stm32f407xx.d)
+F (../Core/Src/main.c)(0x6A80253A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\main.o --omf_browse f407_vet6_test\main.crf --depend f407_vet6_test\main.d)
 I (../Core/Inc/main.h)(0x6A7F068D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6A7D5A52)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A7F068D)
@@ -50,17 +50,17 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x6A7D5A01
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x6A7D5A01)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6A7D5A01)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6A7D5A01)
-I (../Core/Inc/can.h)(0x6A7F1F99)
+I (../Core/Inc/can.h)(0x6A802539)
 I (../Core/Inc/i2c.h)(0x6A7EDC96)
-I (../Core/Inc/rtc.h)(0x6A7D5A5D)
+I (../Core/Inc/rtc.h)(0x6A80292E)
 I (../Core/Inc/spi.h)(0x6A7F068C)
-I (../Core/Inc/usart.h)(0x6A7D5A5D)
+I (../Core/Inc/usart.h)(0x6A802939)
 I (../Core/Inc/gpio.h)(0x6A7D5A5C)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdio.h)(0x67E3FB1E)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\string.h)(0x67E3FB1E)
 I (../LTC681x/bms_hardware.h)(0x6A7D3963)
-I (../F103_0804_simulink_model_ert_rtw/F103_0804_simulink_model.h)(0x6A7F2970)
-I (../F103_0804_simulink_model_ert_rtw/rtwtypes.h)(0x6A7F2970)
+I (../F103_0804_simulink_model_ert_rtw/F103_0804_simulink_model.h)(0x6A7FD914)
+I (../F103_0804_simulink_model_ert_rtw/rtwtypes.h)(0x6A7FD914)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\math.h)(0x67E3FB1D)
 I (../Appl/bms_app.h)(0x6A7D3962)
 F (../Core/Src/gpio.c)(0x6A7F068A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\gpio.o --omf_browse f407_vet6_test\gpio.crf --depend f407_vet6_test\gpio.d)
@@ -102,7 +102,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6A7D5A52)
-F (../Core/Src/freertos.c)(0x6A7F31FF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\freertos.o --omf_browse f407_vet6_test\freertos.crf --depend f407_vet6_test\freertos.d)
+F (../Core/Src/freertos.c)(0x6A80294A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\freertos.o --omf_browse f407_vet6_test\freertos.crf --depend f407_vet6_test\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6A7D5A01)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stddef.h)(0x67E3FB1E)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdint.h)(0x67E3FB1E)
@@ -151,13 +151,17 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6A7D5A52)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x6A7D5A01)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6A7D5A01)
-I (../F103_0804_simulink_model_ert_rtw/F103_0804_simulink_model.h)(0x6A7F2970)
-I (../F103_0804_simulink_model_ert_rtw/rtwtypes.h)(0x6A7F2970)
+I (../F103_0804_simulink_model_ert_rtw/F103_0804_simulink_model.h)(0x6A7FD914)
+I (../F103_0804_simulink_model_ert_rtw/rtwtypes.h)(0x6A7FD914)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\math.h)(0x67E3FB1D)
 I (../Appl/bms_app.h)(0x6A7D3962)
-I (../Core/Inc/can.h)(0x6A7F1F99)
-F (../Core/Src/can.c)(0x6A7F31FF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\can.o --omf_browse f407_vet6_test\can.crf --depend f407_vet6_test\can.d)
-I (../Core/Inc/can.h)(0x6A7F1F99)
+I (../Core/Inc/can.h)(0x6A802539)
+I (../Core/Inc/rtc.h)(0x6A80292E)
+I (../Core/Inc/usart.h)(0x6A802939)
+I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdio.h)(0x67E3FB1E)
+I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\string.h)(0x67E3FB1E)
+F (../Core/Src/can.c)(0x6A80286A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\can.o --omf_browse f407_vet6_test\can.crf --depend f407_vet6_test\can.d)
+I (../Core/Inc/can.h)(0x6A802539)
 I (../Core/Inc/main.h)(0x6A7F068D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6A7D5A52)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A7F068D)
@@ -245,8 +249,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6A7D5A52)
-F (../Core/Src/rtc.c)(0x6A7D5A5D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\rtc.o --omf_browse f407_vet6_test\rtc.crf --depend f407_vet6_test\rtc.d)
-I (../Core/Inc/rtc.h)(0x6A7D5A5D)
+F (../Core/Src/rtc.c)(0x6A802976)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\rtc.o --omf_browse f407_vet6_test\rtc.crf --depend f407_vet6_test\rtc.d)
+I (../Core/Inc/rtc.h)(0x6A80292E)
 I (../Core/Inc/main.h)(0x6A7F068D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6A7D5A52)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A7F068D)
@@ -323,8 +327,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6A7D5A52)
-F (../Core/Src/usart.c)(0x6A7D5A5D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\usart.o --omf_browse f407_vet6_test\usart.crf --depend f407_vet6_test\usart.d)
-I (../Core/Inc/usart.h)(0x6A7D5A5D)
+F (../Core/Src/usart.c)(0x6A80293C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\usart.o --omf_browse f407_vet6_test\usart.crf --depend f407_vet6_test\usart.d)
+I (../Core/Inc/usart.h)(0x6A802939)
 I (../Core/Inc/main.h)(0x6A7F068D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6A7D5A52)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A7F068D)
@@ -362,7 +366,19 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6A7D5A52)
-F (../Core/Src/stm32f4xx_it.c)(0x6A7F054C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\stm32f4xx_it.o --omf_browse f407_vet6_test\stm32f4xx_it.crf --depend f407_vet6_test\stm32f4xx_it.d)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x6A7D5A01)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6A7D5A01)
+I (../Core/Inc/FreeRTOSConfig.h)(0x6A7F054A)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6A7D5A01)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6A7D5A01)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6A7D5A01)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h)(0x6A7D5A01)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x6A7D5A01)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x6A7D5A01)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6A7D5A01)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6A7D5A01)
+I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\string.h)(0x67E3FB1E)
+F (../Core/Src/stm32f4xx_it.c)(0x6A8028D2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\stm32f4xx_it.o --omf_browse f407_vet6_test\stm32f4xx_it.crf --depend f407_vet6_test\stm32f4xx_it.d)
 I (../Core/Inc/main.h)(0x6A7F068D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6A7D5A52)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x6A7F068D)
@@ -400,8 +416,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x6A7D5A52)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6A7D5A52)
-I (../Core/Inc/stm32f4xx_it.h)(0x6A7F054C)
-I (../Core/Inc/can.h)(0x6A7F1F99)
+I (../Core/Inc/stm32f4xx_it.h)(0x6A8028D3)
+I (../Core/Inc/can.h)(0x6A802539)
 I (../Core/Inc/bl_enter_bl.h)(0x6A7EDAF2)
 F (../Core/Src/stm32f4xx_hal_msp.c)(0x6A7F054C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\stm32f4xx_hal_msp.o --omf_browse f407_vet6_test\stm32f4xx_hal_msp.crf --depend f407_vet6_test\stm32f4xx_hal_msp.d)
 I (../Core/Inc/main.h)(0x6A7F068D)
@@ -1508,7 +1524,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x6A7D5A01)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x6A7D5A01)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6A7D5A01)
-F (..\LTC681x\bms_hardware.c)(0x6A7F31FF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\bms_hardware.o --omf_browse f407_vet6_test\bms_hardware.crf --depend f407_vet6_test\bms_hardware.d)
+F (..\LTC681x\bms_hardware.c)(0x6A80286A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\bms_hardware.o --omf_browse f407_vet6_test\bms_hardware.crf --depend f407_vet6_test\bms_hardware.d)
 I (..\LTC681x\bms_hardware.h)(0x6A7D3963)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdint.h)(0x67E3FB1E)
 I (../Core/Inc/spi.h)(0x6A7F068C)
@@ -1560,7 +1576,7 @@ I (..\LTC681x\LTC681x.h)(0x6A7D3963)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x67E3FB1E)
 I (..\LTC681x\bms_hardware.h)(0x6A7D3963)
 I (..\LTC681x\LTC6813_stm32.h)(0x6A7D3963)
-F (..\Appl\bms_app.c)(0x6A7F31FF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\bms_app.o --omf_browse f407_vet6_test\bms_app.crf --depend f407_vet6_test\bms_app.d)
+F (..\Appl\bms_app.c)(0x6A80286A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\bms_app.o --omf_browse f407_vet6_test\bms_app.crf --depend f407_vet6_test\bms_app.d)
 I (..\Appl\bms_app.h)(0x6A7D3962)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdint.h)(0x67E3FB1E)
 I (../Core/Inc/main.h)(0x6A7F068D)
@@ -1604,9 +1620,9 @@ I (../LTC681x/LTC681x.h)(0x6A7D3963)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x67E3FB1E)
 I (../LTC681x/bms_hardware.h)(0x6A7D3963)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\string.h)(0x67E3FB1E)
-F (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.c)(0x6A7F2970)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\f103_0804_simulink_model.o --omf_browse f407_vet6_test\f103_0804_simulink_model.crf --depend f407_vet6_test\f103_0804_simulink_model.d)
-I (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.h)(0x6A7F2970)
-I (..\F103_0804_simulink_model_ert_rtw\rtwtypes.h)(0x6A7F2970)
+F (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.c)(0x6A7FD914)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../LTC681x -I ../Appl -I ../F103_0804_simulink_model_ert_rtw-I.\RTE\_F407_VET6_Test-IE:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSER_VECT_TAB_ADDRESS -DVECT_TAB_OFFSET="0x4000"-o f407_vet6_test\f103_0804_simulink_model.o --omf_browse f407_vet6_test\f103_0804_simulink_model.crf --depend f407_vet6_test\f103_0804_simulink_model.d)
+I (..\F103_0804_simulink_model_ert_rtw\F103_0804_simulink_model.h)(0x6A7FD914)
+I (..\F103_0804_simulink_model_ert_rtw\rtwtypes.h)(0x6A7FD914)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\math.h)(0x67E3FB1D)
 I (../Appl/bms_app.h)(0x6A7D3962)
 I (E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\include\stdint.h)(0x67E3FB1E)

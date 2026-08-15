@@ -31,3 +31,6 @@
 ### v0.2.1 | 2026_08_14
 - ==Transplantation== from __"F103_0811_simulink"__  TO  __"F407_VET6_Test"__ successfully, compatible with the newest bootloader project
 > Realize the conditional jump from the app to the bootloader
+
+### v0.2.2 | 2026_08_15
+- add RTC time in __"F407_VET6_Test"__ project, compatible with the newest bootloader project

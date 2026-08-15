@@ -21,7 +21,14 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
+#include "cmsis_os.h"
+#include <string.h>
 
+#define MYUART_TX_BUF_SIZE   128U
+#define MYUART_TX_WAIT_MS    1000U
+
+static osSemaphoreId_t s_uart_tx_sem = NULL;
+static uint8_t s_uart_tx_buf[MYUART_TX_BUF_SIZE];
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -80,6 +87,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+    /* USART1 interrupt Init */
+    HAL_NVIC_SetPriority(USART1_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspInit 1 */
 
   /* USER CODE END USART1_MspInit 1 */
@@ -103,6 +113,8 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
     */
     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_9|GPIO_PIN_10);
 
+    /* USART1 interrupt Deinit */
+    HAL_NVIC_DisableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspDeInit 1 */
 
   /* USER CODE END USART1_MspDeInit 1 */
@@ -110,6 +122,62 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+
+void MyUART_InitTxIT(void)
+{
+  if (s_uart_tx_sem == NULL)
+  {
+    s_uart_tx_sem = osSemaphoreNew(1U, 1U, NULL);
+  }
+}
+
+HAL_StatusTypeDef MyUART_Transmit(const uint8_t *data, uint16_t len)
+{
+  HAL_StatusTypeDef st;
+
+  if ((data == NULL) || (len == 0U))
+  {
+    return HAL_ERROR;
+  }
+  if (s_uart_tx_sem == NULL)
+  {
+    return HAL_ERROR;
+  }
+  if (len > MYUART_TX_BUF_SIZE)
+  {
+    len = MYUART_TX_BUF_SIZE;
+  }
+
+  if (osSemaphoreAcquire(s_uart_tx_sem, MYUART_TX_WAIT_MS) != osOK)
+  {
+    return HAL_TIMEOUT;
+  }
+
+  (void)memcpy(s_uart_tx_buf, data, len);
+  st = HAL_UART_Transmit_IT(&huart1, s_uart_tx_buf, len);
+  if (st != HAL_OK)
+  {
+    (void)osSemaphoreRelease(s_uart_tx_sem);
+  }
+
+  return st;
+}
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+  if ((huart->Instance == USART1) && (s_uart_tx_sem != NULL))
+  {
+    (void)osSemaphoreRelease(s_uart_tx_sem);
+  }
+}
+
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+  if ((huart->Instance == USART1) && (s_uart_tx_sem != NULL))
+  {
+    (void)osSemaphoreRelease(s_uart_tx_sem);
+  }
+}
 
 /* USER CODE END 1 */
 

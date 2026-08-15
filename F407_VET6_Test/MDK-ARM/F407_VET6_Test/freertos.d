@@ -53,3 +53,7 @@ f407_vet6_test\freertos.o: ../F103_0804_simulink_model_ert_rtw/rtwtypes.h
 f407_vet6_test\freertos.o: E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 f407_vet6_test\freertos.o: ../Appl/bms_app.h
 f407_vet6_test\freertos.o: ../Core/Inc/can.h
+f407_vet6_test\freertos.o: ../Core/Inc/rtc.h
+f407_vet6_test\freertos.o: ../Core/Inc/usart.h
+f407_vet6_test\freertos.o: E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+f407_vet6_test\freertos.o: E:\SOFTWARE_PACKAGE_INSTALLING\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

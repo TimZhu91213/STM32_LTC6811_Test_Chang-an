@@ -21,7 +21,10 @@
 #include "rtc.h"
 
 /* USER CODE BEGIN 0 */
+#include "stm32f4xx_hal_pwr_ex.h"
 
+#define RTC_BKP_MAGIC  0x32F2U
+#define RTC_BKP_REG    RTC_BKP_DR0
 /* USER CODE END 0 */
 
 RTC_HandleTypeDef hrtc;
@@ -56,29 +59,31 @@ void MX_RTC_Init(void)
   }
 
   /* USER CODE BEGIN Check_RTC_BKUP */
-
+  HAL_PWR_EnableBkUpAccess();
+  if (HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_REG) != RTC_BKP_MAGIC)
+  {
+    /** First power-up: set calendar origin and mark backup domain. */
+    sTime.Hours = 0x0;
+    sTime.Minutes = 0x0;
+    sTime.Seconds = 0x0;
+    sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+    sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+    if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD) != HAL_OK)
+    {
+      Error_Handler();
+    }
+    sDate.WeekDay = RTC_WEEKDAY_MONDAY;
+    sDate.Month = RTC_MONTH_JANUARY;
+    sDate.Date = 0x1;
+    sDate.Year = 0x0;
+    if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
+    {
+      Error_Handler();
+    }
+    HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_REG, RTC_BKP_MAGIC);
+  }
   /* USER CODE END Check_RTC_BKUP */
 
-  /** Initialize RTC and set the Time and Date
-  */
-  sTime.Hours = 0x0;
-  sTime.Minutes = 0x0;
-  sTime.Seconds = 0x0;
-  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
-  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
-  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sDate.WeekDay = RTC_WEEKDAY_MONDAY;
-  sDate.Month = RTC_MONTH_JANUARY;
-  sDate.Date = 0x1;
-  sDate.Year = 0x0;
-
-  if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
-  {
-    Error_Handler();
-  }
   /* USER CODE BEGIN RTC_Init 2 */
 
   /* USER CODE END RTC_Init 2 */
@@ -98,7 +103,7 @@ void HAL_RTC_MspInit(RTC_HandleTypeDef* rtcHandle)
   /** Initializes the peripherals clock
   */
     PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_RTC;
-    PeriphClkInitStruct.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
+    PeriphClkInitStruct.RTCClockSelection = RCC_RTCCLKSOURCE_LSE;
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
     {
       Error_Handler();
@@ -129,6 +134,35 @@ void HAL_RTC_MspDeInit(RTC_HandleTypeDef* rtcHandle)
 }
 
 /* USER CODE BEGIN 1 */
+
+void RTC_GetDateTime(RTC_TimeTypeDef *time, RTC_DateTypeDef *date)
+{
+  if ((time == NULL) || (date == NULL))
+  {
+    return;
+  }
+
+  (void)HAL_RTC_GetTime(&hrtc, time, RTC_FORMAT_BIN);
+  (void)HAL_RTC_GetDate(&hrtc, date, RTC_FORMAT_BIN);
+}
+
+uint32_t RTC_GetTotalSeconds(void)
+{
+  RTC_TimeTypeDef time = {0};
+  RTC_DateTypeDef date = {0};
+  static const uint16_t days_before_month[] = {
+    0U, 0U, 31U, 59U, 90U, 120U, 151U, 181U, 212U, 243U, 273U, 304U, 334U
+  };
+
+  RTC_GetDateTime(&time, &date);
+
+  return ((uint32_t)date.Year * 365U * 86400U)
+         + ((uint32_t)days_before_month[date.Month] * 86400U)
+         + (((uint32_t)date.Date - 1U) * 86400U)
+         + ((uint32_t)time.Hours * 3600U)
+         + ((uint32_t)time.Minutes * 60U)
+         + (uint32_t)time.Seconds;
+}
 
 /* USER CODE END 1 */
 

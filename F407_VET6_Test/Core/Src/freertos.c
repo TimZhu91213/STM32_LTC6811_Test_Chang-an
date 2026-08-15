@@ -28,6 +28,10 @@
 #include "F103_0804_simulink_model.h"
 #include "rtwtypes.h"
 #include "can.h"
+#include "rtc.h"
+#include "usart.h"
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -71,6 +75,13 @@ const osThreadAttr_t Task03_attributes = {
   .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityAboveNormal,
 };
+/* Definitions for Task04 */
+osThreadId_t Task04Handle;
+const osThreadAttr_t Task04_attributes = {
+  .name = "Task04",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -80,6 +91,7 @@ const osThreadAttr_t Task03_attributes = {
 void StartDefaultTask(void *argument);
 void StartTask02(void *argument);
 void StartTask03(void *argument);
+void StartTask04(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -91,6 +103,7 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
   MyCAN_InitTxIT();
+  MyUART_InitTxIT();
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -118,6 +131,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of Task03 */
   Task03Handle = osThreadNew(StartTask03, NULL, &Task03_attributes);
+
+  /* creation of Task04 */
+  Task04Handle = osThreadNew(StartTask04, NULL, &Task04_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -194,6 +210,45 @@ void StartTask03(void *argument)
     (void)osDelayUntil(tick);
   }
   /* USER CODE END StartTask03 */
+}
+
+/* USER CODE BEGIN Header_StartTask04 */
+/**
+* @brief Function implementing the Task04 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTask04 */
+void StartTask04(void *argument)
+{
+  /* USER CODE BEGIN StartTask04 */
+  RTC_TimeTypeDef rtc_time = {0};
+  RTC_DateTypeDef rtc_date = {0};
+  char line[96];
+  uint8_t last_sec = 0xFFU;
+  uint32_t total_sec;
+
+  for (;;)
+  {
+    RTC_GetDateTime(&rtc_time, &rtc_date);
+    if (rtc_time.Seconds != last_sec)
+    {
+      last_sec = rtc_time.Seconds;
+      total_sec = RTC_GetTotalSeconds();
+      (void)snprintf(line, sizeof(line),
+                     "RTC %04lu-%02u-%02u %02u:%02u:%02u uptime=%lus\r\n",
+                     (unsigned long)(2000U + rtc_date.Year),
+                     (unsigned int)rtc_date.Month,
+                     (unsigned int)rtc_date.Date,
+                     (unsigned int)rtc_time.Hours,
+                     (unsigned int)rtc_time.Minutes,
+                     (unsigned int)rtc_time.Seconds,
+                     (unsigned long)total_sec);
+      (void)MyUART_Transmit((const uint8_t *)line, (uint16_t)strlen(line));
+    }
+    osDelay(10);
+  }
+  /* USER CODE END StartTask04 */
 }
 
 /* Private application code --------------------------------------------------*/

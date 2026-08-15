@@ -41,7 +41,8 @@ extern RTC_HandleTypeDef hrtc;
 void MX_RTC_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+void RTC_GetDateTime(RTC_TimeTypeDef *time, RTC_DateTypeDef *date);
+uint32_t RTC_GetTotalSeconds(void);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
