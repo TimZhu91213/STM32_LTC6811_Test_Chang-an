@@ -6,6 +6,14 @@
 #include "spi.h"
 #include "main.h"
 #include "stm32f4xx_hal.h"
+#include "core_cm4.h"
+
+static void dwt_delay_init(void)
+{
+  CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+  DWT->CYCCNT = 0U;
+  DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+}
 
 void bms_hardware_init(void)
 {
@@ -16,6 +24,8 @@ void bms_hardware_init(void)
   {
     MX_SPI1_Init();
   }
+
+  dwt_delay_init();
 }
 
 void cs_low(uint8_t pin)
@@ -30,13 +40,23 @@ void cs_high(uint8_t pin)
   HAL_GPIO_WritePin(SPI_CS1_GPIO_Port, SPI_CS1_Pin, GPIO_PIN_SET);
 }
 
-/* Busy-wait microseconds (approx @ SystemCoreClock) */
+/* Busy-wait microseconds via DWT CYCCNT @ SystemCoreClock */
 void delay_u(uint16_t micro)
 {
-  uint32_t cycles = ((SystemCoreClock / 1000000U) * (uint32_t)micro) / 5U;
-  while (cycles--)
+  uint32_t start;
+  uint32_t ticks;
+
+  if (micro == 0U)
   {
-    __NOP();
+    return;
+  }
+
+  ticks = (SystemCoreClock / 1000000U) * (uint32_t)micro;
+  start = DWT->CYCCNT;
+
+  while ((DWT->CYCCNT - start) < ticks)
+  {
+    /* busy-wait until micro seconds elapsed */
   }
 }
 

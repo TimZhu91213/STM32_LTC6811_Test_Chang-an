@@ -1,0 +1,57 @@
+# --- Keil / MDK build outputs ---
+*.o
+*.d
+*.crf
+*.axf
+*.elf
+*.bin
+*.map
+*.lst
+*.lnp
+*.dep
+*.htm
+*.build_log.htm
+*_sct.Bak
+*.Bak
+*.uvguix*
+*.sct
+
+# Keep intentional linker scripts under MDK-ARM root (if any named explicitly)
+!**/MDK-ARM/*.sct
+
+# Object / listing output folders (Target name subdirs)
+**/MDK-ARM/*/*.o
+**/MDK-ARM/RTE/
+**/RTE/
+
+# --- IDE / editor ---
+.vscode/
+.idea/workspace.xml
+.idea/shelf/
+*.suo
+*.user
+*.user.*
+
+# --- Logs / temp ---
+*.log
+**/build_log.*
+**/migrate_build.log
+**/JLinkLog.txt
+**/JLinkSettings.ini
+
+# --- Simulink codegen / cache (keep *_ert_rtw/*.c|*.h|rtwtypes.h|rtmodel.h) ---
+slprj/
+*.slxc
+**/tmwinternal/
+**/*_ert_rtw/tmwinternal/
+**/*_ert_rtw/*.mat
+**/*_ert_rtw/*.dmr
+**/*_ert_rtw/html/
+**/*_ert_rtw/instrumented/
+**/_sharedutils/*.dmr
+
+# --- Cloud sync noise ---
+*.baiduyun.uploading.cfg
+*.baiduyun.downloading.cfg
+*.baiduyun.p.downloading
+*.baiduyun.p.uploading
